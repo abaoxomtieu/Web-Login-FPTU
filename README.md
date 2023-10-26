@@ -1,2 +1,7 @@
 # Web-Login-FPTU
-Web login for FPTU
+**Login**
+
+![image](image/login-page.png)
+
+**Forgot Password Page**
+![iamge](image/Forgot-password-page.png)
