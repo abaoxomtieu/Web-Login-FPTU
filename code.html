@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Final Exam</title>
+    <link rel = "icon" href =  
+        "image\logo-fpt-university_043151936.png" 
+        type = "image/x-icon">
+
+    <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css_file.css">
+</head>
+<body>
+        <div class="image-home">
+            <img src="image\logo-fpt-university_043151936.png" alt="Your Image Description">
+        </div>
+
+
+    <div class="container">
+        <div class="sidebar">
+            <button class="btn" id="dropdownbtn">Menu</button>
+            <div class="dropdown-content">
+                <button class="btn white-btn" id="loginbtn" onclick="login()">Sign in</button>
+                <button class="btn" id="registerbtn" onclick="register()">Sign up</button>
+
+
+            </div>
+        </div>
+    </div>
+    
+        </header>
+        <div class="form">
+            <div class="login">
+                <div class ="on_top_login">
+                    <p>FPT Account</p>
+                </div>
+            <div class="left" id="login">
+                <form>
+                    <div class="top">
+                        <!-- <p>Do not have a sign in account ? <a href="#" onclick="register()">Sign Up</a></p> -->
+                        <h2>Sign In</h2>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="text" placeholder="Username" required>
+                        <span> <i class="fa-solid fa-user"></i></span>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <span><i class="fa-solid fa-eye" id="bg" onclick="showHint()" aria-hidden="true"  ></i></span>
+                    </div>
+                    <div class="forget">
+                        <label><input type="checkbox">Remember</label>
+                        
+                        <a href="#" onclick="register()"> Forgot password?</a>
+                    </div>
+                    <div class="button">
+                        <button>Login</button>
+                    </div>
+
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="right" id="register">
+                <form>
+                    <div class="top">
+                        <p>Do you already have a login account? <a href="#" onclick="login()">Sign In</a></p>
+                        <h2>Reset Password</h2>
+                    </div>
+                    <div class="two-input">
+
+                        <div class="input">
+                         <input type="text" placeholder="Username">
+                         <span> <i class="fa-solid fa-user"></i></span>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <input type="email" placeholder="Email">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                    </div>
+                    <div class="forget">
+                        
+                        <a href="#">Terms & conditions</a>
+                    </div>
+                    <div class="button">
+                        <button onclick="login()" >Send</button>
+                        
+                    </div> 
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var a = document.getElementById('loginbtn');
+        var b = document.getElementById('registerbtn');
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        function login()
+        {
+            x.style.left = '1px';
+            y.style.right = '-390px';
+            a.className += ' white-btn';   
+            b.className = 'btn';
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+        function register()
+        {
+            x.style.left = '-390px';
+            y.style.right = '1px';
+            a.className = 'btn';   
+            b.className += ' white-btn';
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+    </script>
+    <script>
+        var st = false;
+        function showHint(){
+            if(st){
+                document.getElementById("password").setAttribute('type','password');
+                document.getElementById("bg").style.color = 'black';
+                st = false;
+            }
+            else{
+                document.getElementById("password").setAttribute('type','text');
+                document.getElementById("bg").style.color = 'white';
+                st = true;
+            }
+        }
+    </script>
+    <script>document.getElementById("dropdownbtn").addEventListener("click", function() {
+        var dropdown = document.querySelector(".dropdown-content");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    });
+    </script>
+    <script>
+        function redirectToHome() { 
+    window.location.href = 'homepage.html';
+}
+    </script>
+
+</body>
+</html>
